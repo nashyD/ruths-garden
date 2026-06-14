@@ -133,6 +133,11 @@ h3.display { font-size: clamp(1.5rem, 2.6vw, 2.1rem); }
 .section-head--light .display { color: var(--cream); }
 .section-head--light .section-head__lede { color: rgba(244,239,227,.78); }
 
+/* Botanical ornament (divider sprig) */
+.ornament { display: block; width: 190px; max-width: 52%; height: auto; margin: 1.5rem auto 0; color: var(--brass); }
+.section-head--light .ornament { color: var(--brass-bright); }
+.welcome__inner .ornament { color: var(--brass); }
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
@@ -424,11 +429,15 @@ body.menu-open .mobile-menu { opacity: 1; visibility: visible; transform: none; 
 /* ---------- LEGACY ---------- */
 .legacy { background: var(--evergreen-2); color: var(--cream); overflow: hidden; }
 .legacy__bg {
-  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
   background:
     radial-gradient(70% 60% at 85% 0%, rgba(184,146,78,.22), transparent 60%),
     radial-gradient(60% 70% at 0% 100%, rgba(84,112,76,.35), transparent 60%);
 }
+.legacy__branch { position: absolute; width: clamp(150px, 20vw, 280px); height: auto; opacity: .16; }
+.legacy__branch--l { left: -34px; bottom: -28px; transform: rotate(6deg); }
+.legacy__branch--r { right: -34px; top: -32px; transform: scaleX(-1) rotate(6deg); }
+@media (max-width: 700px) { .legacy__branch { opacity: .1; width: 130px; } }
 .legacy__inner { position: relative; z-index: 1; }
 .legacy__cards {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
