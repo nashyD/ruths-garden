@@ -90,8 +90,8 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 
 /* ---------- Layout primitives ---------- */
 .container { width: min(100% - 3rem, var(--container)); margin-inline: auto; }
-.section { padding-block: clamp(4.5rem, 9vw, 8rem); position: relative; }
-.section--ivory { background: var(--ivory); }
+.section { padding-block: clamp(4.5rem, 9vw, 8rem); position: relative; background-image: url("../img/decor/wash.svg"); background-size: 380px; background-position: center top; }
+.section--ivory { background-color: var(--ivory); }
 
 .eyebrow {
   font-family: var(--font-ui);
@@ -299,17 +299,14 @@ body.menu-open .mobile-menu { opacity: 1; visibility: visible; transform: none; 
   margin-top: clamp(3rem, 6vw, 4.5rem); text-align: left;
 }
 .usecase {
-  padding: 2rem 1.75rem; background: var(--ivory);
+  padding: 2rem 1.75rem 2.25rem; background: var(--ivory); text-align: center;
   border: 1px solid var(--line); border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
 }
 .usecase:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: rgba(184,146,78,.4); }
-.usecase__icon {
-  display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%;
-  background: rgba(184,146,78,.12); color: var(--brass-text); margin-bottom: 1.1rem;
-}
-.usecase__icon svg { width: 26px; height: 26px; }
+.usecase__art { width: 150px; max-width: 64%; margin: 0 auto 1.1rem; }
+.usecase__art svg { width: 100%; height: auto; display: block; }
 .usecase__title { font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; color: var(--ink); margin-bottom: .4rem; }
 .usecase p { color: var(--ink-soft); font-size: 1rem; line-height: 1.65; }
 
